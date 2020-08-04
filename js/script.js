@@ -26,7 +26,18 @@ navSettings.onclick = function () {
 
 // Settings
 const taskTitle = document.getElementById("task-title");
+
+let but = document.getElementById("but");
+let inputEmail = document.getElementById("titleTaskApp").value;
+
 function titleTaskApp() {
-    const titleTaskApp = document.getElementById("titleTaskApp").value;
-    taskTitle.innerHTML = titleTaskApp;
+    localStorage.setItem("email", inputEmail);
+    localset();
 }
+
+function localset() {
+    taskTitle.innerHTML = localStorage.getItem("email");
+}
+
+window.onload = localset();
+
