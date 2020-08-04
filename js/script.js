@@ -23,3 +23,10 @@ navSettings.onclick = function () {
     navSettings.classList.toggle("active");
     block_visible();
 };
+
+// Settings
+const taskTitle = document.getElementById("task-title");
+function titleTaskApp() {
+    const titleTaskApp = document.getElementById("titleTaskApp").value;
+    taskTitle.innerHTML = titleTaskApp;
+}
