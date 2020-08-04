@@ -25,19 +25,16 @@ navSettings.onclick = function () {
 };
 
 // Settings
-const taskTitle = document.getElementById("task-title");
 
-let but = document.getElementById("but");
-let inputEmail = document.getElementById("titleTaskApp").value;
+const taskTitle = document.getElementById("task-title");
+let inputEmail = document.getElementById("titleTaskApp");
 
 function titleTaskApp() {
-    localStorage.setItem("email", inputEmail);
-    localset();
-}
-
-function localset() {
+    localStorage.setItem("email", inputEmail.value);
     taskTitle.innerHTML = localStorage.getItem("email");
 }
 
-window.onload = localset();
+window.onload = function () {
+    taskTitle.innerHTML = localStorage.getItem("email");
+}
 
