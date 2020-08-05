@@ -45,22 +45,15 @@ let postCode = '<div class="post"><div class="post-text"><div class="post-title"
 
 function addElement() {
     arr.push(postCode);
+    blockPost.insertAdjacentHTML("afterBegin", arr[arr.length - 1]);
+    checkPost();
 }
-
 
 function checkPost() {
-    for (let i = 0; i < arr.length; i++) {
-        blockPost.insertAdjacentHTML("afterBegin", arr[i]);
+    arr.forEach(function (item, i, arr) {
         console.log(arr[i]);
-    }
+    })
 }
-
-
-
-
-
-
-arr = JSON.parse(localStorage.getItem("array"));
 
 
 
