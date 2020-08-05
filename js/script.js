@@ -25,16 +25,42 @@ navSettings.onclick = function () {
 };
 
 // Settings
+window.onload = function () {
+    taskTitle.innerHTML = localStorage.getItem("title-app");
+}
 
-const taskTitle = document.getElementById("task-title");
-let inputEmail = document.getElementById("titleTaskApp");
+let taskTitle = document.getElementById("task-title");
+let inputTitleApp = document.getElementById("titleTaskApp");
 
 function titleTaskApp() {
-    localStorage.setItem("email", inputEmail.value);
-    taskTitle.innerHTML = localStorage.getItem("email");
+    localStorage.setItem("title-app", inputTitleApp.value);
+    taskTitle.innerHTML = localStorage.getItem("title-app");
 }
 
-window.onload = function () {
-    taskTitle.innerHTML = localStorage.getItem("email");
+// Posts
+let arr = [];
+let name = ['Max', 'Andrei']
+let postCode = '<div class="post"><div class="post-text"><div class="post-title"><h2>' + name[0] + '</h2></div><div class="post-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,nisi!Lorem ipsum dolor sit amet consectetur adipisicing elit.</div><div class="post-info"><i class="far fa-calendar-alt"></i>Data: 3.08.2020</div></div><div class="post-marker"><div class="green" id="marker"></div></div></div>';
+
+
+function addElement() {
+    arr.push(postCode);
 }
+
+
+function checkPost() {
+    for (let i = 0; i < arr.length; i++) {
+        blockPost.insertAdjacentHTML("afterBegin", arr[i]);
+        console.log(arr[i]);
+    }
+}
+
+
+
+
+
+
+arr = JSON.parse(localStorage.getItem("array"));
+
+
 
