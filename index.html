@@ -24,7 +24,8 @@
                 <h1 id="task-title">Task maneger</h1>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, dolor qui!</p>
             </div>
-            <button id="but" onclick="addElement();"><i class="fa fa-user-plus"></i> Add task</button>
+            <button id="openModal" onclick=""><i class="fa fa-user-plus"></i> Add task</button>
+            <button id="del" onclick="deletePost();"><i class="fa fa-close"></i> Delete</button>
         </div>
 
 
@@ -86,6 +87,22 @@
                         oninput="titleTaskApp();">
                 </div>
             </div>
+        </div>
+    </div>
+
+    <!-- Modal window -->
+    <div class="modal" id="modal">
+        <div class="header-modal">
+            <h2>Add post</h2>
+            <button class="but-close" id="close">
+                <i class="fa fa-close"></i>
+            </button>
+        </div>
+        <div class="modal-body">
+            <h2>Task title</h2>
+            <input id="titleTask" placeholder="" value="hello" name="status" type="text">
+            <h2>Task description</h2>
+            <textarea name="descriptionTask" id="descriptionTask" value="hello" cols="30" rows="10"></textarea>
         </div>
     </div>
     <script src="https://kit.fontawesome.com/0019c10cab.js" crossorigin="anonymous"></script>
