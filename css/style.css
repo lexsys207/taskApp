@@ -264,6 +264,11 @@ h1, h2, h3, h4, h5, h6 {
     transition: 0.5s;
 }
 
+.modal .modal-body .textarea {
+    height: 200px;
+    margin-bottom: 20px;
+}
+
 .modal button {
     background: #4761e2;
     color: #fafafa;
