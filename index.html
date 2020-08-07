@@ -94,15 +94,15 @@
     <div class="modal" id="modal">
         <div class="header-modal">
             <h2>Add post</h2>
-            <button class="but-close" id="close">
+            <button class="but-close" id="close" onclick="closeModal();">
                 <i class="fa fa-close"></i>
             </button>
         </div>
         <div class="modal-body">
             <h2>Task title</h2>
-            <input id="titleTask" oninput="addTitleName();" placeholder="" value="руддщ" name="status" type="text">
+            <input id="titleTask" placeholder="" name="status" type="text">
             <h2>Task description</h2>
-            <textarea name="descriptionTask" id="descriptionTask" value="hello" cols="30" rows="10"></textarea>
+            <input class="textarea" name="descriptionTask" id="descriptionTask"></input>
         </div>
         <button onclick="addElement(); closeModal();"><i class="fa fa-check"></i> Select</button>
     </div>
