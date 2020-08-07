@@ -264,6 +264,24 @@ h1, h2, h3, h4, h5, h6 {
     transition: 0.5s;
 }
 
+.modal button {
+    background: #4761e2;
+    color: #fafafa;
+    padding: 8px 14px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    box-shadow: none;
+    border: none;
+    border-radius: 3px;
+    position: relative;
+}
+
+.modal button i {
+    font-style: normal;
+    margin-right: 10px;
+}
+
 
 
 

@@ -37,20 +37,6 @@
                 <a class="" id="nav-settings" href="#">Settings</a>
             </div>
             <div id="post">
-                <!-- <div class="post">
-                    <div class="post-text">
-                        <div class="post-title">
-                            <h2>Stop Thinking And Start Doing</h2>
-                        </div>
-                        <div class="post-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
-                            nisi!
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                        <div class="post-info"><i class="far fa-calendar-alt"></i>Data: 3.08.2020</div>
-                    </div>
-                    <div class="post-marker">
-                        <div class="green" id="marker"></div>
-                    </div>
-                </div>
                 <div class="post">
                     <div class="post-text">
                         <div class="post-title">
@@ -61,7 +47,21 @@
                             Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
                         <div class="post-info"><i class="far fa-calendar-alt"></i>Data: 3.08.2020</div>
                     </div>
-                    <div class="post-marker">
+                    <div class="post-marker marker">
+                        <div class="green" id="marker"></div>
+                    </div>
+                </div>
+                <!-- <div class="post">
+                    <div class="post-text">
+                        <div class="post-title">
+                            <h2>Stop Thinking And Start Doing</h2>
+                        </div>
+                        <div class="post-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+                            nisi!
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                        <div class="post-info"><i class="far fa-calendar-alt"></i>Data: 3.08.2020</div>
+                    </div>
+                    <div class="post-marker marker">
                         <div class="red" id="marker"></div>
                     </div>
                 </div>
@@ -100,10 +100,11 @@
         </div>
         <div class="modal-body">
             <h2>Task title</h2>
-            <input id="titleTask" placeholder="" value="hello" name="status" type="text">
+            <input id="titleTask" oninput="addTitleName();" placeholder="" value="руддщ" name="status" type="text">
             <h2>Task description</h2>
             <textarea name="descriptionTask" id="descriptionTask" value="hello" cols="30" rows="10"></textarea>
         </div>
+        <button onclick="addElement(); closeModal();"><i class="fa fa-check"></i> Select</button>
     </div>
     <script src="https://kit.fontawesome.com/0019c10cab.js" crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
