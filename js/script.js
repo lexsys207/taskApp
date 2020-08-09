@@ -63,7 +63,7 @@ function enterElement() {
 function addElement() {
     taskDescription = String(document.getElementById("descriptionTask").value);
     name = String(document.getElementById("titleTask").value);
-    let postCode = '<div class="post"><div class="post-text"><div class="post-title"><h2>' + name + '</h2></div><div class="post-description">' + taskDescription + '</div><div class="post-info"><i class="far fa-calendar-alt"></i>Data: ' + normalDate + '</div></div><div class="post-marker marker"><div class="green " id="marker"></div></div></div>';
+    let postCode = '<div class="post"><div class="post-text"><div class="post-title"><h2>' + name + '</h2></div><div class="post-description">' + taskDescription + '</div><div class="post-info"><i class="far fa-calendar-alt"></i>Data: ' + normalDate + '</div></div><div class="post-marker marker"><div class="' + colorSelect + '" id="marker"></div></div></div>';
     arr.push(postCode); // Добавление нового поста в конец массива
     console.log(arr.length); // Проверка
     enterElement();
@@ -92,7 +92,7 @@ function addElement() {
 
 // deleteButton.onclick = deleteTask;
 
-//Modal window
+// Modal window
 openModal.onclick = function () {
     modal.style = "display: block;";
 }
@@ -100,6 +100,35 @@ openModal.onclick = function () {
 function closeModal() {
     modal.style = "display: none;"
 }
+
+// Color picker
+const colorGreen = document.getElementById("color-green"),
+    colorYellow = document.getElementById("color-yellow"),
+    colorRed = document.getElementById("color-red");
+
+let colorSelect = '';
+
+colorGreen.onclick = function () {
+    colorSelect = "green";
+    colorYellow.style = "opacity: 0;";
+    colorRed.style = "opacity: 0;";
+    colorGreen.style = "opacity: 1;";
+}
+
+colorYellow.onclick = function () {
+    colorSelect = "yellow";
+    colorYellow.style = "opacity: 1;";
+    colorRed.style = "opacity: 0;";
+    colorGreen.style = "opacity: 0;";
+}
+
+colorRed.onclick = function () {
+    colorSelect = "red";
+    colorYellow.style = "opacity: 0;";
+    colorRed.style = "opacity: 1;";
+    colorGreen.style = "opacity: 0;";
+}
+
 
 
 

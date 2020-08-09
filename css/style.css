@@ -287,6 +287,55 @@ h1, h2, h3, h4, h5, h6 {
     margin-right: 10px;
 }
 
+.color-picker {
+    padding: 0px 50px 10px 0px;
+}
+
+.color-picker .color-picker-title {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.color-picker .color-picker-title p:last-child {
+    text-align: right;
+}
+
+.color-picker .color-picker-gradient {
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(90deg, rgba(82,181,43,1) 0%, rgba(237,234,58,1) 50%, rgba(213,58,58,1) 100%);
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.color-picker .color-picker-gradient p {
+    width: 10px;
+    height: 10px;
+    border: solid 2px #333337;
+    border-radius: 3px;
+    margin: 0;
+    padding: 0;
+    transform: rotate(45deg);
+    margin-left: 45px;
+}
+
+#color-green {
+    
+}
+
+#color-yellow {
+    opacity: 0;
+}
+
+#color-red {
+    opacity: 0;
+}
+
 
 
 
