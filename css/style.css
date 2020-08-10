@@ -324,17 +324,22 @@ h1, h2, h3, h4, h5, h6 {
     margin-left: 45px;
 }
 
-#color-green {
-    
+#color-green { }
+#color-yellow { opacity: 0; }
+#color-red { opacity: 0; }
+
+.color-picker-gradient-color:first-child p {
+    background: green;
 }
 
-#color-yellow {
-    opacity: 0;
+.color-picker-gradient-color p {
+    background:  yellow;
 }
 
-#color-red {
-    opacity: 0;
+.color-picker-gradient-color:last-child p {
+    background: red;
 }
+
 
 
 
