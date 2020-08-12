@@ -48,12 +48,14 @@ let dateMonth = String(date.getUTCMonth());
 let dateYear = String(date.getFullYear());
 let normalDate = String(date.toLocaleDateString());
 let del = document.getElementsByClassName("del");
+let saveBtn = document.getElementById("add-post");
 
 function deleteTodo() {
     for (let span of del) {
         span.addEventListener("click", function () {
             span.parentElement.remove();
             event.stopPropagation();
+            localStorage.setItem('todoList', blockPost.innerHTML);
         });
     }
 }
@@ -63,8 +65,21 @@ function addPost() {
     name = String(document.getElementById("titleTask").value);
     let postCode = '<div class="post"><i class="fas fa-trash-alt del"></i><div class="post-text"><div class="post-title"><h2>' + name + '</h2></div><div class="post-description">' + taskDescription + '</div><div class="post-info"><i class="far fa-calendar-alt"></i>Data: ' + normalDate + '</div></div><div class="post-marker marker"><div class="' + colorSelect + '" id="marker"></div></div></div>';
     blockPost.insertAdjacentHTML("afterBegin", postCode);
-
     deleteTodo();
+
+}
+
+saveBtn.addEventListener('click', function () {
+    localStorage.setItem('todoList', blockPost.innerHTML);
+
+});
+
+function loadTodo() {
+    if (localStorage.getItem('todoList')) {
+        blockPost.innerHTML = localStorage.getItem('todoList');
+        taskTitle.innerHTML = localStorage.getItem("title-app");
+        deleteTodo();
+    }
 }
 
 // Modal window
@@ -105,4 +120,4 @@ colorRed.onclick = function () {
 }
 
 deleteTodo();
-addPost();
+loadTodo();
