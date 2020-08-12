@@ -28,13 +28,8 @@ navSettings.onclick = function () {
     block_visible();
 };
 
-// Settings
-// window.onload = function () {
-//     taskTitle.innerHTML = localStorage.getItem("title-app");
-//     blockPost.insertAdjacentHTML("afterBegin", JSON.parse(localStorage.getItem("array")));
-//     se();
-// }
 
+//Settings
 let taskTitle = document.getElementById("task-title");
 let inputTitleApp = document.getElementById("titleTaskApp");
 
@@ -44,8 +39,7 @@ function titleTaskApp() {
 
 }
 
-// Posts
-let arr = [];
+//Post
 let name = "";
 let taskDescription = "";
 let date = new Date();
@@ -53,73 +47,25 @@ let dateDay = String(date.getDate());
 let dateMonth = String(date.getUTCMonth());
 let dateYear = String(date.getFullYear());
 let normalDate = String(date.toLocaleDateString());
-
-// function enterElement() {
-//     let newDiv = arr[arr.length - 1];
-//     blockPost.insertAdjacentHTML("afterBegin", newDiv);
-//     localStorage.setItem("array", JSON.stringify(arr));
-// }
-
-function addElement() {
-    taskDescription = String(document.getElementById("descriptionTask").value);
-    name = String(document.getElementById("titleTask").value);
-    let postCode = '<div class="post" id="posts"><div class="post-text"><div class="post-title"><h2>' + name + '</h2></div><div class="post-description">' + taskDescription + '</div><div class="post-info"><i class="far fa-calendar-alt"></i>Data: ' + normalDate + '</div></div><div class="post-marker marker"><div class="' + colorSelect + '" id="marker"></div></div></div>';
-    blockPost.insertAdjacentHTML("afterBegin", postCode);
-    // arr.push(postCode); // Добавление нового поста в конец массива
-    // console.log(arr.length); // Проверка
-    // enterElement();
-    // se();
-    deleteTodo();
-}
-
-let arrPost = '';
-var arrayElem = [];
-let posts = document.getElementsByClassName(".post");
-
-
+let del = document.getElementsByClassName("del");
 
 function deleteTodo() {
-    for (post of posts) {
-        post.addEventListener("click", function () {
-            post.parentElement.remove();
+    for (let span of del) {
+        span.addEventListener("click", function () {
+            span.parentElement.remove();
             event.stopPropagation();
         });
     }
 }
 
-// function postSearch() {
+function addPost() {
+    taskDescription = String(document.getElementById("descriptionTask").value);
+    name = String(document.getElementById("titleTask").value);
+    let postCode = '<div class="post"><i class="fas fa-trash-alt del"></i><div class="post-text"><div class="post-title"><h2>' + name + '</h2></div><div class="post-description">' + taskDescription + '</div><div class="post-info"><i class="far fa-calendar-alt"></i>Data: ' + normalDate + '</div></div><div class="post-marker marker"><div class="' + colorSelect + '" id="marker"></div></div></div>';
+    blockPost.insertAdjacentHTML("afterBegin", postCode);
 
-//     console.log(viePost.length);
-//     viePost.onclick = function () {
-//         viePost.style = "display: none;";
-//         postSearch();
-//     }
-// }
-
-
-
-// function deletePost() {
-//     arr.length = 0;
-//     localStorage.setItem("array", JSON.stringify(arr));
-//     var listPost = document.querySelectorAll("div[name=d]");
-//     for (var i = 0; i < listPost.length; i++) {
-//         listPost[i].style = "display: none;";
-//     }
-// }
-
-// let deleteButton = document.querySelector("div.marker");
-
-// let deleteTask = function () {
-//     let listItem = this.parentNode;
-//     let ul = listItem.parentNode;
-//     //Remove the parent list item from the ul.
-//     ul.removeChild(listItem);
-//     deleteButton = document.querySelector("button.delete");
-//     let deleteButton = document.querySelector("div.marker");
-// }
-
-
-// deleteButton.onclick = deleteTask;
+    deleteTodo();
+}
 
 // Modal window
 openModal.onclick = function () {
@@ -159,7 +105,4 @@ colorRed.onclick = function () {
 }
 
 deleteTodo();
-
-
-
-
+addPost();
