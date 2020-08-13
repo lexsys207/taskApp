@@ -63,7 +63,7 @@ function deleteTodo() {
 function addPost() {
     taskDescription = String(document.getElementById("descriptionTask").value);
     name = String(document.getElementById("titleTask").value);
-    let postCode = '<div class="post"><i class="fas fa-trash-alt del"></i><div class="post-text"><div class="post-title"><h2>' + name + '</h2></div><div class="post-description">' + taskDescription + '</div><div class="post-info"><i class="far fa-calendar-alt"></i>Data: ' + normalDate + '</div></div><div class="post-marker marker"><div class="' + colorSelect + '" id="marker"></div></div></div>';
+    let postCode = '<div class="post"><i class="del"><img src="/img/icon/delete.svg"></i><div class="post-text"><div class="post-title"><h2>' + name + '</h2></div><div class="post-description">' + taskDescription + '</div><div class="post-info"><i class=""><img src="/img/icon/calendar.svg"></i>Data: ' + normalDate + '</div></div><div class="post-marker marker"><div class="' + colorSelect + '" id="marker"></div></div></div>';
     blockPost.insertAdjacentHTML("afterBegin", postCode);
     deleteTodo();
 
