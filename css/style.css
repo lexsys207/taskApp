@@ -229,6 +229,12 @@ h1, h2, h3, h4, h5, h6 {
     transition: 0.5s;
 }
 
+.content .settings .select-image-header {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-gap: 10px;
+}
+
 .modal {
     position: fixed;
     top: 0;

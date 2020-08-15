@@ -87,41 +87,9 @@ function deleteTodo() {
     }
 }
 
-// function postSearch() {
-
-//     console.log(viePost.length);
-//     viePost.onclick = function () {
-//         viePost.style = "display: none;";
-//         postSearch();
-//     }
-// }
-
-
-
-// function deletePost() {
-//     arr.length = 0;
-//     localStorage.setItem("array", JSON.stringify(arr));
-//     var listPost = document.querySelectorAll("div[name=d]");
-//     for (var i = 0; i < listPost.length; i++) {
-//         listPost[i].style = "display: none;";
-//     }
-// }
-
-// let deleteButton = document.querySelector("div.marker");
-
-// let deleteTask = function () {
-//     let listItem = this.parentNode;
-//     let ul = listItem.parentNode;
-//     //Remove the parent list item from the ul.
-//     ul.removeChild(listItem);
-//     deleteButton = document.querySelector("button.delete");
-//     let deleteButton = document.querySelector("div.marker");
-// }
-
-
-// deleteButton.onclick = deleteTask;
-
 // Modal window
+let deleteModal = document.getElementById("modal-delete-post");
+
 openModal.onclick = function () {
     modal.style = "display: block;";
 }

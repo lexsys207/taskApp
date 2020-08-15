@@ -39,6 +39,17 @@ function titleTaskApp() {
 
 }
 
+let image_first = document.getElementById("image-1");
+let image_second = document.getElementById("image-2");
+let header = document.querySelector(".header");
+image_first.onclick = function () {
+    header.style = "background: url(img/header.jpg);";
+}
+image_second.onclick = function () {
+    header.style = "background: url(img/golden-gate-fog-1545805-639x478.jpg);";
+}
+
+
 //Post
 let name = "";
 let taskDescription = "";
@@ -63,7 +74,7 @@ function deleteTodo() {
 function addPost() {
     taskDescription = String(document.getElementById("descriptionTask").value);
     name = String(document.getElementById("titleTask").value);
-    let postCode = '<div class="post"><i class="del"><img src="/img/icon/delete.svg"></i><div class="post-text"><div class="post-title"><h2>' + name + '</h2></div><div class="post-description">' + taskDescription + '</div><div class="post-info"><i class=""><img src="/img/icon/calendar.svg"></i>Data: ' + normalDate + '</div></div><div class="post-marker marker"><div class="' + colorSelect + '" id="marker"></div></div></div>';
+    let postCode = '<div class="post"><i class="del"><img src="img/icon/delete.svg"></i><div class="post-text"><div class="post-title"><h2>' + name + '</h2></div><div class="post-description">' + taskDescription + '</div><div class="post-info"><i class=""><img src="img/icon/calendar.svg"></i>Data: ' + normalDate + '</div></div><div class="post-marker marker"><div class="' + colorSelect + '" id="marker"></div></div></div>';
     blockPost.insertAdjacentHTML("afterBegin", postCode);
     deleteTodo();
 
@@ -85,6 +96,18 @@ function loadTodo() {
 // Modal window
 openModal.onclick = function () {
     modal.style = "display: block;";
+    let start = Date.now();
+    let timer = setInterval(function () {
+        let timePassed = Date.now() - start;
+
+        modal.style = "opacity: 1;";
+
+        if (timePassed > 30) {
+            clearInterval(timer);
+            modal.style = "opacity: 1;";
+        };
+
+    }, 10);
 }
 
 function closeModal() {
@@ -118,6 +141,9 @@ colorRed.onclick = function () {
     colorRed.style = "opacity: 1;";
     colorGreen.style = "opacity: 0;";
 }
+
+// Animation
+
 
 deleteTodo();
 loadTodo();
