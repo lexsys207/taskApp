@@ -41,14 +41,43 @@ function titleTaskApp() {
 
 let image_first = document.getElementById("image-1");
 let image_second = document.getElementById("image-2");
+let image_three = document.getElementById("image-3");
 let header = document.querySelector(".header");
+let header_style = "";
+let select_img_header = "";
+
+header.style = localStorage.getItem("header-app");
+
 image_first.onclick = function () {
-    header.style = "background: url(img/header.jpg);";
+    header_style = "background: url(img/downtown-690826_640.jpg);";
+    localStorage.setItem("header-app", header_style);
+    header.style = header_style;
+    select_img_header = image_first.classList.toggle('active');
+    localStorage.setItem("select_img_header", select_img_header);
+    image_second.classList.remove('active');
+    image_three.classList.remove('active');
 }
 image_second.onclick = function () {
-    header.style = "background: url(img/golden-gate-fog-1545805-639x478.jpg);";
+    header_style = "background: url(img/golden-gate-fog-1545805-639x478.jpg);";
+    localStorage.setItem("header-app", header_style);
+    header.style = header_style;
+    select_img_header = image_second.classList.toggle('active');
+    localStorage.setItem("select_img_header", select_img_header);
+    image_second.classList.toggle('active');
+    image_three.classList.remove('active');
+    image_first.classList.remove('active');
+}
+image_three.onclick = function () {
+    header_style = "background: url(img/chicago-890349_640.jpg);";
+    localStorage.setItem("header-app", header_style);
+    header.style = header_style;
+    select_img_header = image_three.classList.toggle('active');
+    localStorage.setItem("select_img_header", select_img_header);
+    image_second.classList.remove('active');
+    image_first.classList.remove('active');
 }
 
+select_img_header = localStorage.getItem("select_img_header");
 
 //Post
 let name = "";
@@ -96,18 +125,6 @@ function loadTodo() {
 // Modal window
 openModal.onclick = function () {
     modal.style = "display: block;";
-    let start = Date.now();
-    let timer = setInterval(function () {
-        let timePassed = Date.now() - start;
-
-        modal.style = "opacity: 1;";
-
-        if (timePassed > 30) {
-            clearInterval(timer);
-            modal.style = "opacity: 1;";
-        };
-
-    }, 10);
 }
 
 function closeModal() {
@@ -142,8 +159,17 @@ colorRed.onclick = function () {
     colorGreen.style = "opacity: 0;";
 }
 
-// Animation
+// Social menu
+const openMenu = document.getElementById("target-menu"),
+    socialMenu = document.getElementById("target-menu-block"),
+    closeMenu = document.getElementById("close-menu");
 
+openMenu.onclick = function () {
+    socialMenu.classList.toggle("active");
+}
+closeMenu.onclick = function () {
+    socialMenu.classList.toggle("active");
+}
 
 deleteTodo();
 loadTodo();
