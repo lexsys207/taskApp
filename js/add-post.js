@@ -124,11 +124,11 @@ function loadTodo() {
 
 // Modal window
 openModal.onclick = function () {
-    modal.style = "display: block;";
+    modal.style = "display: block; opacity: 1; transition: 2s;";
 }
 
 function closeModal() {
-    modal.style = "display: none;"
+    modal.style = "display: none; opacity:0;"
 }
 
 // Color picker

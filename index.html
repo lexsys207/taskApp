@@ -22,8 +22,8 @@
             </div>
             <div class="target-menu-block" id="target-menu-block">
                 <div class="header-menu">
-                    <h2>social menu</h2>
-                    <span id="close-menu">x</span>
+                    <h2>social</h2>
+                    <span id="close-menu"><img src="img/icon/close-menu.svg" alt=""></span>
                 </div>
                 <div class="body-menu">
                     <div><img src="img/icon/twitter.svg" alt=""></div>
@@ -34,9 +34,10 @@
             </div>
             <div class="site-info">
                 <h1 id="task-title">Task maneger</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis, dolor qui!</p>
+                <p>This app for records your mini tasks. Record tasks for every day. To add a task, click "+ Add task"
+                </p>
             </div>
-            <button id="openModal" onclick=""><i class="">+</i> Add task</button>
+            <button id="openModal" onclick=""><i class="">+</i> Add a task</button>
         </div>
 
 
@@ -110,9 +111,9 @@
     <!-- Modal window -->
     <div class="modal" id="modal">
         <div class="header-modal">
-            <h2>Add post</h2>
+            <h2>Add a task</h2>
             <button class="but-close" id="close" onclick="closeModal();">
-                <img src="/img/icon/close.svg" alt="">
+                <img src="img/icon/close.svg" alt="">
             </button>
         </div>
         <div class="modal-body">
@@ -123,9 +124,9 @@
         </div>
         <div class="color-picker">
             <div class="color-picker-title">
-                <p>Easy</p>
+                <p>Marker: </p>
                 <p></p>
-                <p>Hard</p>
+                <p></p>
             </div>
             <div class="color-picker-gradient">
                 <div class="color-picker-gradient-color" id="color-green">
@@ -139,7 +140,8 @@
                 </div>
             </div>
         </div>
-        <button id="add-post" onclick="addPost(); closeModal();"><i class="fa fa-check"></i> Select</button>
+        <button id="add-post" onclick="addPost(); closeModal();"><i class=""><img src="img/icon/check.svg" alt=""></i>
+            Add a task</button>
     </div>
     <script src="https://kit.fontawesome.com/0019c10cab.js" crossorigin="anonymous"></script>
     <script src="js/add-post.js"></script>

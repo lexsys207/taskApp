@@ -98,7 +98,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .header button i {
     font-style: normal;
-    margin-right: 10px;
 }
 
 .content .container {
@@ -207,6 +206,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 24px;
     color: #333337;
     font-weight: 700;
+    margin-bottom: 5px;
 }
 
 .content .settings input {
@@ -216,7 +216,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 18px;
-    color: #858585;
+    color: #4761e2;
     background: rgb(196, 229, 244);
     border-radius: 3px;
     padding: 10px 5px;
@@ -257,6 +257,8 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 100;
     padding: 20px;
     display: none;
+    opacity: 0;
+    transition: 1s;
 }
 
 .modal .header-modal {
@@ -267,6 +269,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .modal .header-modal h2 {
     font-size: 26px; 
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 .modal .header-modal .but-close {
@@ -296,7 +300,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 18px;
-    color: #858585;
+    color: #4761e2;
     background: rgb(196, 229, 244);
     border-radius: 3px;
     padding: 10px 5px;
@@ -323,7 +327,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .modal button i {
     font-style: normal;
-    margin-right: 10px;
+    margin-right: 5px;
+}
+
+.modal button i img  {
+    max-width: 15px;
 }
 
 .color-picker {
@@ -372,7 +380,7 @@ h1, h2, h3, h4, h5, h6 {
 .color-picker-gradient-color:last-child p { background: red; }
 
 .target-menu-block {
-    width: 300px;
+    width: calc(100% - 10%);
     height: 100%;
     background: rgba(71, 97, 226, 0.9);
     padding: 20px;
@@ -396,12 +404,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .target-menu-block .header-menu h2 {
+    font-size: 26px;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
 .target-menu-block .header-menu span {
     font-size: 26px;
     font-weight: bold;
+}
+
+.target-menu-block .header-menu span img {
+    max-width: 20px;
 }
 
 .target-menu-block .body-menu {
