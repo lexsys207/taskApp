@@ -16,13 +16,11 @@
   <author href="https://build.phonegap.com" email="sides.developer@gmail.com">
       Max Zamolin
   </author>
-
-  <preference name="BackgroundColor" value="#4761e2"/>
   <platform name="android">
               <icon src="img/icon/icon.png" density="ldpi" />
-              <icon src="res/android/mdpi.png" density="mdpi" />
-              <icon src="res/android/hdpi.png" density="hdpi" />
-              <icon src="res/android/xhdpi.png" density="xhdpi" />
+              <icon src="img/icon/icon.png" density="mdpi" />
+              <icon src="img/icon/icon.png" density="hdpi" />
+              <icon src="img/icon/icon.png" density="xhdpi" />
   </platform>
 
 </widget>
