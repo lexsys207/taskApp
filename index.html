@@ -1,81 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" />
 
     <title>Task App</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <div class="overlay"></div>
-        <div class="container">
-            <div class="menu" id="target-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="target-menu-block" id="target-menu-block">
-                <div class="header-menu">
-                    <h2>social</h2>
-                    <span id="close-menu"><img src="img/icon/close-menu.svg" alt=""></span>
-                </div>
-                <div class="body-menu">
-                    <div><img src="img/icon/twitter.svg" alt=""></div>
-                    <div><a href="https://twitter.com/lexsys207">@lexsys207</a></div>
-                    <div><img src="img/icon/mail.svg" alt=""></div>
-                    <div><a href="mail:ides.developer@gmail.com">ides.developer@gmail.com</a></div>
-                </div>
-            </div>
-            <div class="site-info">
-                <h1 id="task-title">Task maneger</h1>
-                <p>This app for records your mini tasks. Record tasks for every day. To add a task, click "+ Add task"
-                </p>
-            </div>
-            <button id="openModal" onclick=""><i class="">+</i> Add a task</button>
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="menu" id="target-menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-
-
+        <div class="target-menu-block" id="target-menu-block">
+          <div class="header-menu">
+            <h2>social</h2>
+            <span id="close-menu"
+              ><img src="img/icon/close-menu.svg" alt=""
+            /></span>
+          </div>
+          <div class="body-menu">
+            <div><img src="img/icon/twitter.svg" alt="" /></div>
+            <div><a href="https://twitter.com/lexsys207">@lexsys207</a></div>
+            <div><img src="img/icon/mail.svg" alt="" /></div>
+            <div>
+              <a href="mail:ides.developer@gmail.com"
+                >ides.developer@gmail.com</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="site-info">
+          <h1 id="task-title">Task maneger</h1>
+          <p>
+            This app for records your mini tasks. Record tasks for every day. To
+            add a task, click "+ Add task"
+          </p>
+        </div>
+        <button id="openModal" onclick=""><i class="">+</i> Add a task</button>
+      </div>
+      <img class="bg-head" src="" alt="" id="bg-head" />
     </header>
     <div class="content">
-        <div class="container">
-            <div class="nav">
-                <a class="active" id="nav-task" href="#">Tasks</a>
-                <a class="" id="nav-settings" href="#">Settings</a>
+      <div class="container">
+        <div class="nav">
+          <a class="active" id="nav-task" href="#">Tasks</a>
+          <a class="" id="nav-settings" href="#">Settings</a>
+        </div>
+        <div id="post">
+          <div class="post">
+            <i class="del"><img src="img/icon/delete.svg"/></i>
+            <div class="post-text">
+              <div class="post-title">
+                <h2>' + name + '</h2>
+              </div>
+              <div class="post-description">' + taskDescription + '</div>
+              <div class="post-info">
+                <i class=""><img src="img/icon/calendar.svg"/></i>Data: ' +
+                normalDate + '
+              </div>
             </div>
-            <div id="post">
-                <div class="post"><i class="del"><img src="img/icon/delete.svg"></i>
-                    <div class="post-text">
-                        <div class="post-title">
-                            <h2>' + name + '</h2>
-                        </div>
-                        <div class="post-description">' + taskDescription + '</div>
-                        <div class="post-info"><i class=""><img src="img/icon/calendar.svg"></i>Data: ' + normalDate + '
-                        </div>
-                    </div>
-                    <div class="post-marker marker">
-                        <div class="' + colorSelect + '" id="marker"></div>
-                    </div>
-                </div>
-                <div class="post"><i class="del"><img src="img/icon/delete.svg"></i>
-                    <div class="post-text">
-                        <div class="post-title">
-                            <h2>' + name + '</h2>
-                        </div>
-                        <div class="post-description">' + taskDescription + '</div>
-                        <div class="post-info"><i class=""><img src="img/icon/calendar.svg"></i>Data: ' + normalDate + '
-                        </div>
-                    </div>
-                    <div class="post-marker marker">
-                        <div class="' + colorSelect + '" id="marker"></div>
-                    </div>
-                </div>
-                <!-- <div class="post" name="post">
+            <div class="post-marker marker">
+              <div class="' + colorSelect + '" id="marker"></div>
+            </div>
+          </div>
+          <div class="post">
+            <i class="del"><img src="img/icon/delete.svg"/></i>
+            <div class="post-text">
+              <div class="post-title">
+                <h2>' + name + '</h2>
+              </div>
+              <div class="post-description">' + taskDescription + '</div>
+              <div class="post-info">
+                <i class=""><img src="img/icon/calendar.svg"/></i>Data: ' +
+                normalDate + '
+              </div>
+            </div>
+            <div class="post-marker marker">
+              <div class="' + colorSelect + '" id="marker"></div>
+            </div>
+          </div>
+          <!-- <div class="post" name="post">
                     <div class="post-text">
                         <div class="post-title">
                             <h2>Stop Thinking And Start Doing</h2>
@@ -117,60 +129,106 @@
                         <div class="yellow" id="marker"></div>
                     </div>
                 </div> -->
-            </div>
-            <div id="settings">
-                <div class="settings">
-                    <h2>Title task app:</h2>
-                    <input id="titleTaskApp" placeholder="Task maneger" name="status" type="text"
-                        oninput="titleTaskApp();">
-                    <h2>Image header:</h2>
-                    <div class="select-image-header">
-                        <div><img src="img/downtown-690826_640.jpg" id="image-1" alt=""></div>
-                        <div><img src="img/golden-gate-fog-1545805-639x478.jpg" id="image-2" alt=""></div>
-                        <div><img src="img/chicago-890349_640.jpg" id="image-3" alt=""></div>
-                    </div>
-                </div>
-            </div>
         </div>
+        <div id="settings">
+          <div class="settings">
+            <h2>Title task app:</h2>
+            <input
+              id="titleTaskApp"
+              placeholder="Task maneger"
+              name="status"
+              type="text"
+              oninput="titleTaskApp();"
+            />
+            <h2>Image header:</h2>
+            <div class="select-image-header">
+              <div>
+                <img src="img/downtown-690826_640.jpg" id="image-1" alt="" />
+              </div>
+              <div>
+                <img
+                  src="img/golden-gate-fog-1545805-639x478.jpg"
+                  id="image-2"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img src="img/chicago-890349_640.jpg" id="image-3" alt="" />
+              </div>
+            </div>
+            <div class="upload-image-header">
+              <label for="file-uploader" class="input__file-button">
+                <span class="input__file-icon-wrapper"
+                  ><img
+                    class="input__file-icon"
+                    src="img/icon/storage.svg"
+                    alt="Выбрать файл"
+                    width="25"
+                /></span>
+                <span class="input__file-button-text">Upload Image..</span>
+              </label>
+              <input type="file" id="file-uploader" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Modal window -->
     <div class="modal" id="modal">
-        <div class="header-modal">
-            <h2>Add a task</h2>
-            <button class="but-close" id="close" onclick="closeModal();">
-                <img src="img/icon/close.svg" alt="">
-            </button>
+      <div class="header-modal">
+        <h2>Add a task</h2>
+        <button class="but-close" id="close" onclick="closeModal();">
+          <img src="img/icon/close.svg" alt="" />
+        </button>
+      </div>
+      <div class="modal-body">
+        <h2>Task title</h2>
+        <input
+          id="titleTask"
+          placeholder=""
+          name="status"
+          type="text"
+          x-webkit-speech
+        />
+        <h2>Task description</h2>
+        <input
+          class="textarea"
+          name="descriptionTask"
+          id="descriptionTask"
+          x-webkit-speech
+        />
+      </div>
+      <div class="color-picker">
+        <div class="color-picker-title">
+          <p>Marker:</p>
+          <p></p>
+          <p></p>
         </div>
-        <div class="modal-body">
-            <h2>Task title</h2>
-            <input id="titleTask" placeholder="" name="status" type="text">
-            <h2>Task description</h2>
-            <input class="textarea" name="descriptionTask" id="descriptionTask"></input>
+        <div class="color-picker-gradient">
+          <div class="color-picker-gradient-color" id="color-green">
+            <p></p>
+          </div>
+          <div class="color-picker-gradient-color" id="color-yellow">
+            <p></p>
+          </div>
+          <div class="color-picker-gradient-color" id="color-red">
+            <p></p>
+          </div>
         </div>
-        <div class="color-picker">
-            <div class="color-picker-title">
-                <p>Marker: </p>
-                <p></p>
-                <p></p>
-            </div>
-            <div class="color-picker-gradient">
-                <div class="color-picker-gradient-color" id="color-green">
-                    <p></p>
-                </div>
-                <div class="color-picker-gradient-color" id="color-yellow">
-                    <p></p>
-                </div>
-                <div class="color-picker-gradient-color" id="color-red">
-                    <p></p>
-                </div>
-            </div>
-        </div>
-        <button id="add-post" onclick="addPost(); closeModal();"><i class=""><img src="img/icon/check.svg" alt=""></i>
-            Add a task</button>
+      </div>
+      <button id="add-post" onclick="addPost(); closeModal();">
+        <i class=""><img src="img/icon/check.svg" alt=""/></i> Add a task
+      </button>
     </div>
-    <script src="https://kit.fontawesome.com/0019c10cab.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/0019c10cab.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="js/add-post.js"></script>
-</body>
-
+    <script>
+      // Включить
+      element.webkitSpeech = true;
+    </script>
+  </body>
 </html>
